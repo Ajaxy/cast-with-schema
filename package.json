@@ -1,0 +1,44 @@
+{
+  "name": "cast-with-schema",
+  "version": "1.0.0",
+  "description": "Casting JS objects to correct types using JSON schemas",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ajaxy/cast-with-schema.git"
+  },
+  "keywords": [
+    "types",
+    "casting",
+    "json",
+    "schema",
+    "api",
+    "rest",
+    "openapi",
+    "swagger",
+    "specification",
+    "documentation"
+  ],
+  "author": "Alexander Zinchuk (alexander@zinchuk.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ajaxy/cast-with-schema/issues"
+  },
+  "homepage": "https://github.com/Ajaxy/cast-with-schema#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.5.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "dependencies": {}
+}
