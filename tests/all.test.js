@@ -6,8 +6,8 @@ describe('All', () => {
       a: 'value',
       b: '777',
       c: '7.77',
-      d1: '777d', // `777` with integer
-      d2: '777d', // `NaN` with number
+      d1: '777d',
+      d2: '777d',
       e: '777',
       f: 'true',
       g: 'false',
@@ -32,8 +32,8 @@ describe('All', () => {
       u: 'value', // missing schema type
       v: 'value', // missing type,
       w: '',
-      x: '', // `NaN` with integer
-      y: '', // `0` with number
+      x: '',
+      y: '',
       z: '', // `true` with boolean
     }, {
       type: 'object',
@@ -140,14 +140,13 @@ describe('All', () => {
         z: {
           type: 'boolean',
         },
-
       },
     })).toEqual({
       a: 'value',
       b: 777,
       c: 7.77,
       d1: 777,
-      d2: NaN,
+      d2: 777,
       e: '777',
       f: true,
       g: false,
@@ -165,14 +164,14 @@ describe('All', () => {
       n: null,
       o: true,
       p: null,
-      q: NaN,
+      q: 0,
       r: undefined,
-      s: [777, 7.77, NaN],
+      s: [777, 7.77, 0],
       t: undefined,
       u: 'value',
       v: 'value',
       w: '',
-      x: NaN,
+      x: 0,
       y: 0,
       z: true,
     });
