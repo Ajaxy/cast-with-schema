@@ -30,7 +30,11 @@ describe('All', () => {
       s: ['777', '7.77', 'invalid-number'],
       t: {}, // invalid array
       u: 'value', // missing schema type
-      v: 'value', // missing type
+      v: 'value', // missing type,
+      w: '',
+      x: '', // `NaN` with integer
+      y: '', // `0` with number
+      z: '', // `true` with boolean
     }, {
       type: 'object',
       properties: {
@@ -123,8 +127,20 @@ describe('All', () => {
             type: 'number',
           },
         },
-        u: {
+        u: {},
+        w: {
+          type: 'string',
         },
+        x: {
+          type: 'integer',
+        },
+        y: {
+          type: 'number',
+        },
+        z: {
+          type: 'boolean',
+        },
+
       },
     })).toEqual({
       a: 'value',
@@ -155,6 +171,10 @@ describe('All', () => {
       t: undefined,
       u: 'value',
       v: 'value',
+      w: '',
+      x: NaN,
+      y: 0,
+      z: true,
     });
   });
 });
