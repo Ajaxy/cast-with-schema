@@ -1,6 +1,6 @@
 {
   "name": "cast-with-schema",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Casting JS objects to correct types using JSON schemas",
   "main": "lib/index.js",
   "scripts": {
