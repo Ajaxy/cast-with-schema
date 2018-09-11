@@ -21,6 +21,12 @@ describe('All', () => {
         l3: 'true',
         l4: 'false',
       },
+      l2: { // object when `null` allowed
+        l1: 'value',
+        l2: '777',
+        l3: 'true',
+        l4: 'false',
+      },
       m: 'true', // schema with types array
       n: 'null', // `null` allowed using types array
       o: 'true', // schema with `anyOf`
@@ -28,6 +34,7 @@ describe('All', () => {
       q: 'invalid-number',
       r: 'invalid-object',
       s: ['777', '7.77', 'invalid-number'],
+      s2: ['777', '7.77', 'invalid-number'], // array when `null` allowed
       t: {}, // invalid array
       u: 'value', // missing schema type
       v: 'value', // missing type,
@@ -91,6 +98,30 @@ describe('All', () => {
             },
           },
         },
+        l2: {
+          anyOf: [
+            {
+              type: 'object',
+              properties: {
+                l1: {
+                  type: 'string',
+                },
+                l2: {
+                  type: 'number',
+                },
+                l3: {
+                  type: 'boolean',
+                },
+                l4: {
+                  type: 'boolean',
+                },
+              },
+            },
+            {
+              type: 'null',
+            },
+          ],
+        },
         m: {
           type: ['boolean', 'null'],
         },
@@ -120,6 +151,19 @@ describe('All', () => {
           items: {
             type: 'number',
           },
+        },
+        s2: {
+          anyOf: [
+            {
+              type: 'array',
+              items: {
+                type: 'number',
+              },
+            },
+            {
+              type: 'null',
+            },
+          ],
         },
         t: {
           type: 'array',
@@ -160,6 +204,12 @@ describe('All', () => {
         l3: true,
         l4: false,
       },
+      l2: {
+        l1: 'value',
+        l2: 777,
+        l3: true,
+        l4: false,
+      },
       m: true,
       n: null,
       o: true,
@@ -167,6 +217,7 @@ describe('All', () => {
       q: 0,
       r: undefined,
       s: [777, 7.77, 0],
+      s2: [777, 7.77, 0],
       t: undefined,
       u: 'value',
       v: 'value',
