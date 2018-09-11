@@ -32,8 +32,8 @@ describe('All', () => {
       u: 'value', // missing schema type
       v: 'value', // missing type,
       w: '',
-      x: '',
-      y: '',
+      x: 'null',
+      y: { a: 'string', b: '777' },
       z: '', // `true` with boolean
     }, {
       type: 'object',
@@ -132,10 +132,40 @@ describe('All', () => {
           type: 'string',
         },
         x: {
-          type: 'integer',
+          anyOf: [
+            {
+              type: 'object',
+              properties: {
+                a: {
+                  type: 'string',
+                },
+                b: {
+                  type: 'integer',
+                },
+              },
+            },
+            {
+              type: 'null',
+            },
+          ],
         },
         y: {
-          type: 'number',
+          anyOf: [
+            {
+              type: 'object',
+              properties: {
+                a: {
+                  type: 'string',
+                },
+                b: {
+                  type: 'integer',
+                },
+              },
+            },
+            {
+              type: 'null',
+            },
+          ],
         },
         z: {
           type: 'boolean',
@@ -171,8 +201,8 @@ describe('All', () => {
       u: 'value',
       v: 'value',
       w: '',
-      x: 0,
-      y: 0,
+      x: null,
+      y: { a: 'string', b: 777 },
       z: true,
     });
   });

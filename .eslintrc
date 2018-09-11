@@ -9,7 +9,8 @@
         "functions": false,
         "classes": false
       }
-    ]
+    ],
+    "no-restricted-syntax": ["error", "ForInStatement", "LabeledStatement", "WithStatement"]
   },
   "env": {
     "jest": true
