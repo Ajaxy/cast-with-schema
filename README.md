@@ -3,6 +3,15 @@
 
 The way to cast data to types specified with [JSON schema](http://json-schema.org/).
 
+
+### Arguments
+- `source (object)` - Source object to be casted.
+- `schema (object)` - JSON schema containing types definitions.
+- `options (object)`
+    - `allowNaN` — Whether or not to return `NaN` for non-parseable numbers. The default is `false` which will cast `NaN` to `0`.
+
+### Example
+
 May be used for query params casting:
 
 ```js
