@@ -41,7 +41,13 @@ describe('All', () => {
       w: '',
       x: '',
       y: '',
-      z: '', // `true` with boolean
+      z: '', // `false` with boolean
+      aa: true,
+      ab: false,
+      ac: 777,
+      ad: true,
+      ae: false,
+      af: 777,
     }, {
       type: 'object',
       properties: {
@@ -184,6 +190,24 @@ describe('All', () => {
         z: {
           type: 'boolean',
         },
+        aa: {
+          type: 'boolean',
+        },
+        ab: {
+          type: 'boolean',
+        },
+        ac: {
+          type: 'boolean',
+        },
+        ad: {
+          type: 'string',
+        },
+        ae: {
+          type: 'string',
+        },
+        af: {
+          type: 'string',
+        },
       },
     })).toEqual({
       a: 'value',
@@ -224,7 +248,13 @@ describe('All', () => {
       w: '',
       x: 0,
       y: 0,
-      z: true,
+      z: false,
+      aa: true,
+      ab: false,
+      ac: true,
+      ad: 'true',
+      ae: 'false',
+      af: '777',
     });
   });
 });
