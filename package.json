@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "changelog": "github-changes -o Ajaxy -r cast-with-schema --no-merges"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
     "eslint": "^5.4.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "github-changes": "^1.1.2",
     "jest": "^23.5.0"
   },
   "directories": {
