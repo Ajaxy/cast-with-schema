@@ -32,11 +32,11 @@
   },
   "homepage": "https://github.com/Ajaxy/cast-with-schema#readme",
   "devDependencies": {
-    "eslint": "^5.4.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "github-changes": "^1.1.2",
-    "jest": "^23.5.0"
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "github-changes": "^2.0.2",
+    "jest": "^27.0.6"
   },
   "directories": {
     "lib": "lib",
